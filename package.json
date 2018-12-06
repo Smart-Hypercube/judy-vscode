@@ -63,7 +63,7 @@
 	"contributes": {
 		"breakpoints": [
 			{
-				"language": "markdown"
+				"language": "julia"
 			}
 		],
 		"debuggers": [
@@ -98,11 +98,12 @@
 				},
 				"initialConfigurations": [
 					{
-						"type": "mock",
+						"type": "node",
 						"request": "launch",
 						"name": "Ask for file name",
 						"program": "${workspaceFolder}/${command:AskForProgramName}",
 						"stopOnEntry": true
+
 					}
 				],
 				"configurationSnippets": [
@@ -114,7 +115,8 @@
 							"request": "launch",
 							"name": "Ask for file name",
 							"program": "^\"\\${workspaceFolder}/\\${command:AskForProgramName}\"",
-							"stopOnEntry": true
+							"stopOnEntry": true,
+							"debugServer": 4711
 						}
 					}
 				],

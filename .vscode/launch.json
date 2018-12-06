@@ -18,6 +18,18 @@
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			],
+			"outFiles": [ "${workspaceFolder}/out/**/*.js" ],
+			"stopOnEntry": false
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Judy",
+			"preLaunchTask": "npm",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			],
 			"outFiles": [ "${workspaceFolder}/out/**/*.js" ]
 		},
 		{
@@ -27,7 +39,8 @@
 			"cwd": "${workspaceFolder}",
 			"program": "${workspaceFolder}/src/debugAdapter.ts",
 			"args": [ "--server=4711" ],
-			"outFiles": [ "${workspaceFolder}/out/**/*.js" ]
+			"outFiles": [ "${workspaceFolder}/out/**/*.js" ],
+			"stopOnEntry": false
 		},
 		{
 			"type": "node",
@@ -49,7 +62,7 @@
 			"request": "launch",
 			"name": "Mock Sample",
 			"program": "${workspaceFolder}/${command:AskForProgramName}",
-			"stopOnEntry": true
+			"stopOnEntry": false
 		}
 	],
 	"compounds": [
